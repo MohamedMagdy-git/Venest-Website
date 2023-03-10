@@ -162,11 +162,11 @@ textarea {
 
 /* Start Header */
 .header{
-    padding: 20px 5px;
-    z-index: 100;
+    padding: 2px 5px;
+    z-index: 100000;
     position: absolute;
     width: 100%;
-    
+    /* background-color:#112b3c92; */
 }
 .header .container{
     display: flex;
@@ -183,7 +183,7 @@ textarea {
     text-decoration: none;
 }
 .header .container nav  {
-    display: flex;
+    display: flex ;
     align-items: center;
 }
 .header .container nav .icone {
@@ -191,31 +191,11 @@ textarea {
     font-size: 20px;
     color: white;
     margin-right: 20px;
+    cursor: pointer;
 }
+
 .header .container nav .icone:hover {
     color: var(--main-color);
-}
-.header .container nav .icone:hover + ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 76px;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-}
-@media (max-width: 675px) {
-    .header .container nav .icone {
-        display: block;
-    }
-    .header .container nav ul {
-        display: none;
-    }
-    .header .container nav ul li{
-        margin-bottom: 20px;
-        
-    }
 }
 .header .container nav ul {
     margin-right: 30px;
@@ -254,6 +234,77 @@ textarea {
 .header .container nav .search i:hover {
     color: var(--main-color);
 }
+.header .container nav ul i:hover {
+    color: crimson;
+}
+@media (max-width: 675px) {
+    
+    .header .container nav .icone {
+        display: block;
+    }
+    .header .container nav ul {
+        display: none;
+    }
+    .header .container nav ul li{
+        margin-bottom: 20px;
+        
+    }
+    .header .container nav ul i {
+        display: block;
+    }
+}
+.openMenu{
+    transform: translateX(0px);
+}
+/* nav mobile purgr */
+.header  .mobile-nav {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: -17px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+    background-color: #333;
+    z-index: 200000000;
+    transform: translateX(100%);
+}
+.header  .mobile-nav li {
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.header  .mobile-nav a {
+    text-decoration: none;
+    color: #00B0FF;
+    font-size: 22px;
+    transition: var(--main-duration);
+    letter-spacing: .1ch;
+}
+.header .mobile-nav a:hover {
+    font-weight: bold;
+    font-size: 25px;
+}
+.fa-circle-xmark {
+    position: fixed;
+    top: 30px;
+    right: 15px;
+    font-size: 25px;
+    color: white;
+    transition: 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.fa-circle-xmark:hover {
+    color: crimson;
+}
+
 /*  End Header */
 /* Start landing */
 .landing{
@@ -408,7 +459,7 @@ textarea {
 /* Start Features */
 .features {
     height: 100vh;
-    background-image: url(https://i.im.ge/2022/09/08/OkcUqF.alina-grubnyak-IsxaFsXi2rs-unsplash.jpg);
+    background-image: url(https://i.ibb.co/BVN9Qxb/alina-grubnyak-Isxa-Fs-Xi2rs-unsplash.jpg);
     background-size: cover;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -432,7 +483,7 @@ textarea {
     top: 50%;
     transform: translate(0px, -50%); */
     flex-basis: 600px;
-    z-index: 100;
+    z-index: 1;
 }
 .features .text h3{
     font-size: 30px;
@@ -501,12 +552,14 @@ textarea {
 .portfolio .img-container .box{
     position: relative;
     overflow: hidden;
+    transition: var(--main-duration);
 }
 .portfolio .img-container .box:hover .text{
     bottom: 0px;
 }
 .portfolio .img-container .box img {
     width: 100%;
+    height: 100%;
     transition: var(--main-duration);
     filter: grayscale(100%);
 }
@@ -611,7 +664,9 @@ textarea {
 .stats {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-image: url(https://i.im.ge/2022/09/15/1rnBAT.stats.jpg);
+    background-image: url(https://i.ibb.co/qYsqrT9/gambler-94-v-PVEi17-Px-Mo-unsplash.jpg);
+    /* https://i.ibb.co/sRSFJw6/venest.jpg 
+    https://i.im.ge/2022/09/15/1rnBAT.stats.jpg*/
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -635,7 +690,7 @@ textarea {
     background-color: var(--transparent-color);
     padding: 50px;
     border-radius: 15px;
-    z-index: 200;
+    z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 .stats .container .box {
@@ -682,6 +737,7 @@ textarea {
 }
 .stats .container .box p {
     font-size: 18px;
+    font-weight: 500;
 }
 /* End Stats */
 /* Start Client */
@@ -965,12 +1021,12 @@ textarea {
     position: relative;
  }
  .contact .container form input[type=submit]:hover {
-    background-color: #3cc1ff;
+    background-color: var(--hover-color);
  }
 /* End Contact */
 /* Start Subscribe */
 .subscribe{
-    background-color: #607d8b;
+    background-color: #eeeeeeb4;
     padding: 20px 0px;
 }
 .subscribe .container {
@@ -1000,7 +1056,7 @@ textarea {
 }
 .subscribe .container h3 {
     margin-right: 0px;
-    color: white;
+    color: var(--secondary-color);
 }
 @media (min-width: 1050px) {
     .subscribe .container h3 {
@@ -1024,7 +1080,7 @@ textarea {
 }
 .subscribe .container form input[type=submit] {
     transform: translateX(-5px);
-    background-color: var(--main-color);
+    background-color: #aaaaaa94;
     color: white;
     border-radius: 0px 30px 30px 0px;
     padding: 5px 10px 5px 5px;
@@ -1033,13 +1089,13 @@ textarea {
 }
 .subscribe .container form input[type=submit]:hover {
     cursor: pointer;
-    background-color: #3cc1ff;
+    background-color: #aaa;
 }
 .subscribe .container p {
     padding: 0px;
     text-transform: capitalize;
     font-size: 14px;
-    color: white;
+    color: var(--secondary-color);
     font-weight: 300;
 }
 @media (max-width: 550px) {
@@ -1051,22 +1107,46 @@ textarea {
 }
 .subscribe .container p a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--main-color);
 }
 .subscribe .container p a:hover {
     text-decoration: underline;
+}
+.container .social {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .social h4 {
+    margin: 0px;
+    padding: 10px;
+    font-weight: bold;
+    color: #6e6e6e85;
+    font-size: 20px;
+}
+.container .social i {
+    margin-right: 8px;
+    transform: translateX(5px);
+    transition: var(--main-duration);
+    font-size: 20px;
+    color: #6e6e6e85;
+}
+.container .social i:hover{
+    color: var(--hover-color);
+    cursor: pointer;
 }
 /* End Subscribe */
 /* Start Footer */
 .footer {
     padding-top: 10px;
-    padding-bottom: 20px;
-    background-color: var(--secondary-color);
+    padding-bottom: 10px;
+    background-color: #aaa9;
     color: white;
 }
 .footer .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
 }
 .footer .container .logo,
@@ -1078,34 +1158,19 @@ textarea {
     text-align: center;
     width: 100%;
     font-size: 14px;
+    color: #838485;
 }
 .footer .container .logo .venest {
-    font-size: 26px;
-    color: var(--main-color);
+    font-size: 28px;
+    color: #838485;
     font-weight: bold;
     text-decoration: none;
 }
 .footer .container .logo a {
     text-decoration: none;
-    color: white;
+    color: #838485;
     font-weight: bold;
     
 }
-.footer .container .social {
-    text-align: center;
-}
-.footer .container .social h4 {
-    margin: 0px;
-    padding: 10px;
-    font-weight: 100;
-}
-.footer .container .social i {
-    margin-right: 8px;
-    transform: translateX(5px);
-    transition: var(--main-duration);
-}
-.footer .container .social i:hover{
-    color: var(--main-color);
-    cursor: pointer;
-}
+
 /* End Footer */
