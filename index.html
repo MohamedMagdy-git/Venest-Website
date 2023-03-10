@@ -20,7 +20,7 @@
 </head>
 <body>
       <!-- Start Header -->
-      <div class="header">
+      <div class="header" id="Home">
         <div class="container">
             
             <div class="logo">
@@ -44,6 +44,15 @@
                 </div>
             </nav>
         </div>
+        <ul class="mobile-nav">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <li><a class="active" href="#Home">Home</a></li>
+            <li><a  href="#Services">Services</a></li>
+            <li><a  href="#Portfolio">Portfolio</a></li>
+            <li><a  href="#About">About</a></li>
+            <li><a  href="#Pricing">Pricing</a></li>
+            <li><a  href="#Contact">Contact</a></li>
+        </ul>
     </div>
     <!-- End Header -->
     <!-- Start Landing -->
@@ -130,68 +139,124 @@
         </div>
         <div class="container">
             <ul>
-                <li class="active">All</li>
-                <li>Events</li>
-                <li>Photo</li>
-                <li>painting</li>
-                <li>Arts</li>
+                <li class="active" data-cut=".All">All</li>
+                <li data-cut=".Events">Events</li>
+                <li data-cut=".Photo">Photo</li>
+                <li data-cut=".painting">painting</li>
+                <li data-cut=".Arts">Arts</li>
             </ul>
         </div>
         <div class="img-container">
-            <div class="box">
+            <div class="box painting All">
                 <img src="images/protfolio-img1.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>painting</p>
                 </div>
             </div>    
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img2.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img3.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img4.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img5.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img6.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Events All">
                 <img src="images/protfolio-img7.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Events</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Photo All">
                 <img src="images/protfolio-img8.jpg" alt="">
                 <div class="text">
                     <h4>Image Name</h4>
                     <p>Photo</p>
+                </div>
+            </div>
+            <div class="box Arts All">
+                <img src="images/protfolio-img9.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Arts</p>
+                </div>
+            </div>
+            <div class="box Arts All">
+                <img src="images/protfolio-img10.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Arts</p>
+                </div>
+            </div>
+            <div class="box Arts All">
+                <img src="images/protfolio-img11.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Arts</p>
+                </div>
+            </div>
+            <div class="box Photo All">
+                <img src="images/protfolio-img12.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Photo</p>
+                </div>
+            </div>
+            <div class="box Photo All">
+                <img src="images/protfolio-img13.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Photo</p>
+                </div>
+            </div>
+            <div class="box Photo All">
+                <img src="images/protfolio-img14.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>Photo</p>
+                </div>
+            </div>
+            <div class="box painting All">
+                <img src="images/protfolio-img15.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>painting</p>
+                </div>
+            </div>
+            <div class="box painting All">
+                <img src="images/protfolio-img16.jpg" alt="">
+                <div class="text">
+                    <h4>Image Name</h4>
+                    <p>painting</p>
                 </div>
             </div>
         </div>
@@ -225,22 +290,22 @@
             <div class="container">
                 <div class="box">
                     <i class="fa-solid fa-calendar-days"></i>
-                    <div class="number">28</div>
+                    <div class="number" data-goal="28">0</div>
                     <p>Events</p>
                 </div>
                 <div class="box">
                     <i class="fa-sharp fa-solid fa-circle-check"></i>
-                    <div class="number">256</div>
+                    <div class="number" data-goal="273">0</div>
                     <p>Completed Projects</p>
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-palette"></i>
-                    <div class="number">587</div>
+                    <div class="number" data-goal="587">0</div>
                     <p>Paint Art</p>
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-award"></i>
-                    <div class="number">17</div>
+                    <div class="number" data-goal="16">0</div>
                     <p>Awards Received</p>
                 </div>
             </div>
@@ -378,17 +443,6 @@
                 
             </form>
             <p>By subscribing, you agree with Revue&#x2019;s <a href="#">Terms</a> of Service and <a href="#">Privacy Policy</a>.</p>
-        </div>
-    </div>
-    <!-- End Subscribe -->
-    <!-- Start Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="logo">
-                <a class="venest" href="#">𝓥enest</a>
-                    © 2022 All Right Reserved 
-                     By <a href="https://www.facebook.com/profile.php?id=100009886530756">Mohamed Magdy</a>
-            </div>
             <div class="social">
                 <h4>Follow us</h4>
                 <i class="fa-brands fa-facebook"></i>
@@ -397,6 +451,19 @@
             </div>
         </div>
     </div>
+    <!-- End Subscribe -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <a class="venest" href="#">𝓥enest</a>
+                    © 2023 All Right Reserved 
+                     By <a href="https://www.facebook.com/profile.php?id=100009886530756" target="_blank">Mohamed Magdy</a>
+            </div>
+            
+        </div>
+    </div>
     <!-- End Footer -->
+    <script src="main.js"></script>
 </body>
 </html>
